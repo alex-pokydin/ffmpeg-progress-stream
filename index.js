@@ -12,7 +12,7 @@ function progressStream(total) {
     }
 
     var s = chunk.toString();
-    if (s.indexOf('frame=') === 0) {
+    if (s.indexOf('size=') === 0) {
       var info = s.split('\n')[0].trim().split(/[\s\=]+/);
       var status = {};
       for (var i = 0; i < info.length; i += 2) {
